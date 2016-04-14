@@ -1,0 +1,14 @@
+{
+  "name": "amab",
+  "version": "0.0.1",
+  "description": "all maps are beautiful. a map of random tiles",
+  "main": "server.js",
+  "dependencies": {
+    "ellipse": "^0.5.5"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "yetzt <node@yetzt.me>",
+  "license": "Unlicense"
+}
