@@ -17,8 +17,8 @@ var data = JSON.parse(fs.readFileSync(path.resolve(__dirname, "assets/data/data.
 var app = ellipse();
 
 // tile route
-app.get("/random/:z(\\d+)/:x(\\d+):y(\\d+)", function(req, res){
-	res.redirect(data[Math.floor(Math.random()*data.length)].replace("{x}", req.params.x).replace("{y}", req.params.y).replace("{z}", req.params.z));
+app.get("/random/:z(\\d+)/:x(\\d+)/:y(\\d+)", function(req, res){
+	res.redirect(data[Math.floor(Math.random()*data.length)].replace(/\{x\}/g, req.params.x).replace(/\{y\}/g, req.params.y).replace(/\{z\}/g, req.params.z));
 });
 
 // default route
